@@ -572,13 +572,13 @@ if __name__ == '__main__':
         result = decompressed == outputdata
 
         # Print results for user
-        print(f"Test {number + 1:02d}: '{inputdata}' should decompress to '{expectedoutput}'. Result = {bool(result)}")
+        print(f"Test {number + 1:02d}: {inputdata} should decompress to {outputdata}. Result = {bool(result)}")
 
         # Counting successful tests
         if result:
             positivecounter += 1
         else:
-            print("Output gave: ", outputdata)
+            print("Output gave: ", decompressed)
             sys.exit(1)
 
         return positivecounter, number + 1
